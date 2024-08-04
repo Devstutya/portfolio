@@ -18,5 +18,18 @@ module.exports = {
       },
     },
   },
+  darkMode: 'class', // Enable class-based dark mode
+  theme: {
+    extend: {
+      colors: {
+        dark: '#121212', // Example dark mode background color
+        light: '#ffffff', // Example light mode background color
+        customDarkNavBg: '#1a1a1a', // Custom dark mode navbar background color
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
   plugins: [],
 };
