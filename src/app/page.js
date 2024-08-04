@@ -12,7 +12,7 @@ export default function Home() {
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center bg-white/50 backdrop-blur-lg dark:bg-white/20 lg:static lg:w-auto lg:rounded-xl lg:bg-white/50 lg:dark:bg-white/20 p-4">
           &nbsp;
-          <code className="text-2xl font-mono font-bold">Devstutya Pandey</code>
+          <code className="text-2xl font-mono font-bold">Dev's Portfolio</code>
         </p> 
         <nav>
         <ul className="flex space-x-6 mb 12">
@@ -43,8 +43,8 @@ export default function Home() {
             height={200}
             className="rounded-full zoomed-right"
           />
-          <h1 className="text-xl font-bold mt-16">Hi! I'm Devstutya Pandey</h1>
-          <p className="text-small text-center mt-2">Full Stack Developer</p>
+          <h1 className="text-xl font-mono mt-16">Hi! I'm Devstutya Pandey</h1>
+          <p className="text-lg font-mono mt-2">About me</p>
         </div>
       </div>
     </main>
