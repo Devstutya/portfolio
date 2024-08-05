@@ -33,16 +33,17 @@ export default function Home() {
           {/*Nav bar flex container with padding*/}
           <div className={`fixed left-0 top-0 flex w-full justify-between p-28 ${darkMode ? "bg-customDarkNavBg" : "bg-white/50"} backdrop-blur-lg dark:bg-customDarkNavBg`}>
             <p className="flex items-center ml-4">
-              <code className="text-3xl font-mono font-bold">Dev's Portfolio</code>
+              <code className="text-3xl font-mono font-bold">Portfolio</code>
             </p>
             {/* Navigation */}
             <nav className="mr-4">
               <ul className="flex space-x-16">
-                <li>
+                <li className="flex flex-col items-center">
                   <BsFillMoonStarsFill
                     className={`cursor-pointer text-3xl hover:scale-125 transition-transform ${darkMode ? "text-white" : "text-black"}`}
                     onClick={toggleDarkMode}
                   />
+                  <span className="text-sm mt-1">{darkMode ? "Light Mode" : "Dark Mode"}</span>
                 </li>
                 <li className="hover:scale-125 text-2xl transition-transform">
                   <a className="bg-black-500 rounded" href="/resume.pdf" download="Devstutya_Pandey_Resume.pdf">Resume
@@ -50,7 +51,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li className="hover:scale-125 text-2xl transition-transform">
-                  <a href="#about">About</a>
+                  <a href="#skills">Skills</a>
                 </li>
                 <li className="hover:scale-125 text-2xl transition-transform">
                   <a href="#projects">Projects</a>
@@ -77,6 +78,7 @@ export default function Home() {
               <p className="text-lg font-mono mt-2 ml-12">This educational journey is sharpening my technical acumen, preparing me to tackle the complex challenges in the ever-growing field of Computer Science.</p>
               <p className="text-lg font-mono mt-2 ml-12">My goal is to harness this synergy of education and hands-on experience to drive innovation and contribute to groundbreaking projects in my field.</p>
             </div>
+            
           </div>
         </div>
       </main>
