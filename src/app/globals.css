@@ -16,6 +16,11 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px; /*Adjust according to Navbar height*/
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
