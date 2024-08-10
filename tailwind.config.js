@@ -12,22 +12,25 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      // Add custom utilities here
+      colors: {
+        dark: '#121212', // Example dark mode background color
+        light: '#ffffff', // Example light mode background color
+        customDarkNavBg: '#1a1a1a', // Custom dark mode navbar background color
+      },
+      // Extend spacing for padding and margin
+      spacing: {
+        'navbar-height': '80px', // Adjust based on your navbar height
+      },
+      zIndex: {
+        'navbar': '1000', // Ensure navbar stays on top
+      },
+      // Add custom utilities
       transform: {
         'zoomed-right': 'scale(1.2) translateX(10px)',
       },
     },
   },
   darkMode: 'class', // Enable class-based dark mode
-  theme: {
-    extend: {
-      colors: {
-        dark: '#121212', // Example dark mode background color
-        light: '#ffffff', // Example light mode background color
-        customDarkNavBg: '#1a1a1a', // Custom dark mode navbar background color
-      },
-    },
-  },
   variants: {
     extend: {},
   },

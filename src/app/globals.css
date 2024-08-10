@@ -30,7 +30,57 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-  .zoomed-right{
+  .zoomed-right {
     @apply transform scale-125 translate-x-2;
+  }
+  .fixed-navbar {
+    @apply fixed top-0 left-0 w-full z-navbar;
+    background-color: var(--navbar-bg-color, #ffffff); /* Use a variable or default color */
+    /* You can add other styles like padding, border, etc. */
+  }
+  .main-content {
+    padding-top: 80px; /* Adjust this value based on your navbar height */
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+  }
+
+  .skills-container {
+    padding: 2rem;
+    text-align: center;
+    width: 90%    
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; 
+    margin-top: 2rem;
+    
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 4rem;
+    margin-top: 2rem;
+  }
+
+  .skill-logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem;
+  }
+
+  .rounded-logo{
+    border-radius: 50%
   }
 }
