@@ -50,9 +50,15 @@ export default function Home() {
             {/* Divider */}
             <hr className="w-3/4 border-t-2 border-gray-300 my-12" />
             <div id="skills" className="skills-container">
-              <h2 className="text-3xl font-mono mb-4">Skills</h2>
+              <h2 className="text-5xl font-mono mb-4">Skills</h2>
               <Logos/>
-            </div>        
+            </div>  
+            {/* Divider */}
+            <hr className="w-3/4 border-t-2 border-gray-300 my-12" />
+            <div id="projects" className="projects-container">
+              <h2 className="text-5xl font-mono mb-4">Projects</h2>
+              <p className="text-xl font-mono">Coming soon...</p>  
+            </div>    
           </div>
         </div>
       </main>
