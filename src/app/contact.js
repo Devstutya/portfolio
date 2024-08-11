@@ -4,9 +4,12 @@ import React from 'react';
 const Contact = () => {
   return (
     <section id="contact" className="contact-section">
-      <h2 className="text-5xl font-light mb-8">Contact Me</h2>
-      <p className="text-left text-lg mb-6">
-        Feel free to reach out to me through any of the following methods. I look forward to connecting with you!
+      <h2 className="text-5xl font-light mt-20 mb-12">Contact Me</h2>
+      <p className="text-left text-lg">
+        Feel free to reach out to me through any of the following methods.         
+      </p>
+      <p className="text-left text-lg mb-2">
+        I look forward to hearing from you!         
       </p>
       <div className="contact-info-box">
         <p className="text-lg mb-4">

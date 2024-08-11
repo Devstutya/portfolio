@@ -51,7 +51,7 @@ export default function Home() {
             {/* Divider */}
             <hr className="w-3/4 border-t-2 border-gray-300 mt-40 my-12" />
             <div id="skills" className="skills-container">
-              <h2 className="text-5xl font-light mt-20 mb-16">Skills</h2>
+              <h2 className="text-5xl font-light mt-20 mb-12">Skills</h2>
               <Logos/>
             </div>  
             {/* Divider */}
