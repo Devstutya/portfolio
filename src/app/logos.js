@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { useEffect } from 'react';
+import "animate.css";
 
 const logos = [
   { src: '/python-logo.png', alt: 'Python Logo', title: 'Python', name: 'Python' },
@@ -22,10 +24,30 @@ const logos = [
 ];
 
 const Logos = () => {
+  useEffect(() => {
+    const logoElements = document.querySelectorAll('.skill-item');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    logoElements.forEach((logo) => {
+      observer.observe(logo);
+    });
+  }, []);
+
   return (
     <div className="skills-grid">
       {logos.map((logo, index) => (
-        <div className="skill-item" key={index}>
+        <div className="skill-item opacity-0" key={index}>
           <Image 
             src={logo.src} 
             alt={logo.alt} 
