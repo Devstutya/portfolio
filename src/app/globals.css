@@ -90,8 +90,45 @@ body {
   }
 
   .projects-container {
-  padding: 1rem;
-  text-align: center;
-  width: 90%    
+    padding: 1rem;
+    text-align: center;
+    width: 90%    
+  }
+
+  .project-card:hover .click-to-view {
+    opacity: 1; /* Makes the "Click to view" text visible */
+  }
+
+  .click-to-view {
+    opacity: 0; /* Start with the text hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+  }
+
+  /* Project Card */
+.project-card {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark Mode Specific project Styles */
+.dark .project-card {
+  background-color: #2d2d2d;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+.dark .project-card:hover {
+  background-color: #3a3a3a;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.dark .click-to-view {
+  color: #bbb;
+}
+
+
 }
