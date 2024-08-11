@@ -58,41 +58,66 @@ body {
   .skills-container {
     padding: 1rem;
     text-align: center;
-    width: 90%    
+    width: 90%;    
   }
 
   .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center; 
-    margin-top: 2rem;
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 32px;
+    padding: 20px;
   }
 
   .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    margin-right: 4rem;
-    margin-top: 2rem;
+    justify-content: center;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #ffffff; /* Ensure white background */
+    border: 2px solid #ddd;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+
+  .skill-item img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .skill-item span {
+    margin-top: 8px;
+    font-weight: bold;
+  }
+
+  /* Light mode specific styles */
+  .bg-light .skill-item {
+    background-color: #ffffff; /* White background in light mode */
+    border: 2px solid #ddd;
+    color: #333;
+  }
+
+  /* Dark mode specific styles */
+  .bg-dark .skill-item {
+    background-color: #ffffff; /* White background in dark mode */
+    border: 2px solid #444;
+    color: #333; /* Text color in dark mode */
   }
 
   .skill-logo {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 0.5rem;
   }
 
-  .rounded-logo{
-    border-radius: 50%
+  .rounded-logo {
+    border-radius: 50%;
   }
 
   .projects-container {
     padding: 1rem;
     text-align: center;
-    width: 90%    
+    width: 90%;    
   }
 
   .project-card:hover .click-to-view {
@@ -105,30 +130,28 @@ body {
   }
 
   /* Project Card */
-.project-card {
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
+  .project-card {
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
 
-.project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
 
-/* Dark Mode Specific project Styles */
-.dark .project-card {
-  background-color: #2d2d2d;
-  color: #f0f0f0;
-  border: 1px solid #444;
-}
+  /* Dark Mode Specific project Styles */
+  .dark .project-card {
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    border: 1px solid #444;
+  }
 
-.dark .project-card:hover {
-  background-color: #3a3a3a;
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-}
+  .dark .project-card:hover {
+    background-color: #3a3a3a;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
 
-.dark .click-to-view {
-  color: #bbb;
-}
-
-
+  .dark .click-to-view {
+    color: #bbb;
+  }
 }
