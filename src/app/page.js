@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./navbar";
 import Logos from "./logos";
 import Projects from "./projects"; // Import the Projects component
+import Contact from "./contact";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -55,8 +56,10 @@ export default function Home() {
             </div>  
             {/* Divider */}
             <hr className="w-3/4 border-t-2 border-gray-300 mt-40 my-12" />
-            {/* Projects */}
-            <Projects /> {/* Use the Projects component */}
+            <Projects /> 
+            {/* Divider */}
+            <hr className="w-3/4 border-t-2 border-gray-300 mt-40 my-12" />
+            <Contact />
           </div>
         </div>
       </main>

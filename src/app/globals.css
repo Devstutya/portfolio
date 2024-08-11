@@ -154,4 +154,47 @@ body {
   .dark .click-to-view {
     color: #bbb;
   }
+  /*Contact css */
+    .contact-section {
+    padding: 2rem;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-info-box {
+    background-color: #ffffff; /* White background for the contact box */    
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    text-align: left;
+  }
+
+  .contact-info-box p {
+    margin: 0.5rem 0;
+  }
+
+  .contact-info-box a {
+    color: #1d4ed8; /* Blue color for links */
+    text-decoration: none;
+  }
+
+  .contact-info-box a:hover {
+    text-decoration: underline;
+  }
+
+  /* Light mode styles */
+  .bg-light .contact-info-box {
+    border-color: #ddd;
+  }
+
+  /* Dark mode styles */
+  .bg-dark .contact-info-box {
+    background-color: #111111; /* Dark background for contact box */
+    border-color: #444;
+    color: #ddd; /* Ensure text is readable */
+  }
+
 }
