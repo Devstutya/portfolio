@@ -14,7 +14,7 @@ const logos = [
   { src: '/php-logo.png', alt: 'PHP Logo', title: 'PHP', name: 'PHP' },
   { src: '/sql-logo.png', alt: 'SQL Logo', title: 'SQL', name: 'SQL' },
   { src: '/mysql-logo.png', alt: 'MySQL Logo', title: 'MySQL', name: 'MySQL' },
-  { src: '/postgreSQL-logo.png', alt: 'PostgreSQL Logo', title: 'PostgreSQL', name: 'PostgreSQL' },
+  { src: '/postgresql-logo.png', alt: 'PostgreSQL Logo', title: 'PostgreSQL', name: 'PostgreSQL' },
   { src: '/firebase-logo.png', alt: 'Firebase Logo', title: 'Firebase', name: 'Firebase' },
   { src: '/docker-logo.png', alt: 'Docker Logo', title: 'Docker', name: 'Docker' },
   { src: '/fastapi-logo.png', alt: 'FastAPI Logo', title: 'FastAPI', name: 'FastAPI' },
