@@ -14,7 +14,7 @@ const Projects = () => {
           <h3 className="text-3xl font-medium mb-4">Confluence Data Fetcher</h3>
           <p className="text-xl text-left font-light mb-4">A python script utilising fastAPI to retrieve data from a specific confluence domain using Confluence&apos;s API</p>
           <span className="click-to-view absolute bottom-2 left-2 right-2 text-sm font-medium text-gray-500 opacity-0 transition-opacity duration-300">
-            Click to view
+            Click to view on GitHub
           </span>
         </a>        
         <a
@@ -26,7 +26,7 @@ const Projects = () => {
           <h3 className="text-3xl font-medium mb-4">Discourse</h3>
           <p className="text-xl text-left font-light mb-4">An intuitive e-learning platform created using Next.js and Firebase</p>
           <span className="click-to-view absolute bottom-2 left-2 right-2 text-sm font-medium text-gray-500 opacity-0 transition-opacity duration-300">
-            Click to view
+            Click to view on GitHub
           </span>
         </a>
         <a
@@ -38,7 +38,7 @@ const Projects = () => {
           <h3 className="text-3xl font-medium mb-4">Ray&apos;s Groceries</h3>
           <p className="text-xl text-left font-light mb-4">A comprehensive online Shopping platform built with PHP and MySQL</p>
           <span className="click-to-view absolute bottom-2 left-2 right-2 text-sm font-medium text-gray-500 opacity-0 transition-opacity duration-300">
-            Click to view
+            Click to view on GitHub
           </span>
         </a>
         <a
@@ -50,7 +50,7 @@ const Projects = () => {
           <h3 className="text-3xl font-medium mb-4">Portfolio Website</h3>
           <p className="text-xl text-left font-light mb-4">A modern and responsive portfolio created using react.js, showcasing my skills and projects.</p>
           <span className="click-to-view absolute bottom-2 left-2 right-2 text-sm font-medium text-gray-500 opacity-0 transition-opacity duration-300">
-            Click to view
+            Click to view on GitHub
           </span>
         </a>
         {/* Add more projects as needed */}

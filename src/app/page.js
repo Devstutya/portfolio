@@ -44,8 +44,9 @@ export default function Home() {
               />
               <div>
                 <h1 className="text-4xl ml-12">Hi! I&apos;m Devstutya Pandey</h1>
-                <p className="text-2xl font-light mt-8 ml-12">I&apos;m pursuing my Bachelor&apos;s degree at the university of British Columbia, where I am majoring in Computer Science and minoring in Data Science. This educational journey is sharpening my technical acumen, preparing me to tackle the complex challenges in the ever-growing field of Computer Science.</p>
-                <p className="text-2xl font-light mt-2 ml-12">My goal is to harness this synergy of education and hands-on experience to drive innovation and contribute to groundbreaking projects in my field.</p>
+                <p className="text-2xl font-light mt-8 ml-12">A bit about me, </p>
+                <p className="text-2xl font-light mt-2 ml-12">I&apos;m pursuing my Bachelor&apos;s of Science degree at The University of British Columbia, where I am majoring in Computer Science and minoring in Data Science. This educational journey is sharpening my technical acumen, preparing me to tackle the complex challenges in the ever-growing field of Computer Science.</p>
+                <p className="text-2xl font-light mt-2 ml-12">I aim to harness this synergy of education and hands-on experience to drive innovation and contribute to cutting-edge projects in my field. </p>
               </div>    
             </div>  
             {/* Divider */}
