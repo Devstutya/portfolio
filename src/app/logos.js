@@ -18,7 +18,7 @@ const logos = [
   { src: '/firebase-logo.png', alt: 'Firebase Logo', title: 'Firebase', name: 'Firebase' },
   { src: '/docker-logo.png', alt: 'Docker Logo', title: 'Docker', name: 'Docker' },
   { src: '/fastapi-logo.png', alt: 'FastAPI Logo', title: 'FastAPI', name: 'FastAPI' },
-  { src: '/Tableau-logo.jpeg', alt: 'Tableau Logo', title: 'Tableau', name: 'Tableau' },
+  { src: '/Tableau-logo.png', alt: 'Tableau Logo', title: 'Tableau', name: 'Tableau' },
   { src: '/grafana-logo.png', alt: 'Grafana Logo', title: 'Grafana', name: 'Grafana' },
   { src: '/prometheus-logo.png', alt: 'Prometheus Logo', title: 'Prometheus', name: 'Prometheus' },
 ];
