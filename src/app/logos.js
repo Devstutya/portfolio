@@ -14,11 +14,11 @@ const logos = [
   { src: '/php-logo.png', alt: 'PHP Logo', title: 'PHP', name: 'PHP' },
   { src: '/sql-logo.png', alt: 'SQL Logo', title: 'SQL', name: 'SQL' },
   { src: '/mysql-logo.png', alt: 'MySQL Logo', title: 'MySQL', name: 'MySQL' },
-  { src: '/PostgreSQL-logo.png', alt: 'PostgreSQL Logo', title: 'PostgreSQL', name: 'PostgreSQL' },
+  { src: '/postgreSQL-logo.png', alt: 'PostgreSQL Logo', title: 'PostgreSQL', name: 'PostgreSQL' },
   { src: '/firebase-logo.png', alt: 'Firebase Logo', title: 'Firebase', name: 'Firebase' },
   { src: '/docker-logo.png', alt: 'Docker Logo', title: 'Docker', name: 'Docker' },
   { src: '/fastapi-logo.png', alt: 'FastAPI Logo', title: 'FastAPI', name: 'FastAPI' },
-  { src: '/Tableau-logo.png', alt: 'Tableau Logo', title: 'Tableau', name: 'Tableau' },
+  { src: '/tableau-logo.png', alt: 'Tableau Logo', title: 'Tableau', name: 'Tableau' },
   { src: '/grafana-logo.png', alt: 'Grafana Logo', title: 'Grafana', name: 'Grafana' },
   { src: '/prometheus-logo.png', alt: 'Prometheus Logo', title: 'Prometheus', name: 'Prometheus' },
 ];
