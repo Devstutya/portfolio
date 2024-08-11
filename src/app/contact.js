@@ -4,9 +4,9 @@ import React from 'react';
 const Contact = () => {
   return (
     <section id="contact" className="contact-section">
-      <h2 className="text-5xl font-light mt-20 mb-12">Contact Me</h2>
+      <h2 className="text-5xl text-center font-light mt-20 mb-12">Contact</h2>
       <p className="text-left text-lg mb-2">
-        Feel free to reach out to me through any of the following methods.         
+        Feel free to reach out to me using the following methods.         
       </p>
       <div className="contact-info-box">
         <p className="text-lg mb-4">
