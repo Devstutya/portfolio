@@ -25,23 +25,24 @@ const logos = [
 
 const Logos = () => {
   useEffect(() => {
-    const logoElements = document.querySelectorAll('.skill-item');
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    logoElements.forEach((logo) => {
-      observer.observe(logo);
-    });
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -10% 0px', // Start the animation a bit before the section fully enters the view
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+  
+    const sections = document.querySelectorAll('.skill-item, .project-card, .contact-section');
+    sections.forEach((section) => observer.observe(section));
+  
+    return () => observer.disconnect(); // Cleanup observer on unmount
   }, []);
 
   return (

@@ -3,23 +3,26 @@ import "animate.css";
 
 const Contact = () => {
   useEffect(() => {
-    const contactSection = document.querySelector('.contact-section');
-    
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    observer.observe(contactSection);
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -10% 0px', // Start the animation a bit before the section fully enters the view
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+  
+    const sections = document.querySelectorAll('.skill-item, .project-card, .contact-section');
+    sections.forEach((section) => observer.observe(section));
+  
+    return () => observer.disconnect(); // Cleanup observer on unmount
   }, []);
-
+  
   return (
     <section id="contact" className="contact-section opacity-0">
       <h2 className="text-5xl text-center font-light mt-20 mb-12">Contact</h2>

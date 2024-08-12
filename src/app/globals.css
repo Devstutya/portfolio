@@ -31,7 +31,42 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  body.dark {
+    background-color: #121212; /* Darker background for dark mode */
+    color: #e0e0e0; /* Light text color for dark mode */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.2em;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 12px;
+  }
+
+  .main-content {
+    padding: 16px;
+  }
+}
+
 @layer utilities {
+
+  .navbar.dark {
+    background-color: rgba(18, 18, 18, 0.9); /* Adjusted for dark mode */
+  }
+
+  .skill-item.dark, .project-card.dark {
+    background-color: #1e1e1e; /* Darker background for elements */
+    border-color: #333;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
@@ -52,8 +87,38 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Ensure it stays above other content */
+    z-index: 1000; 
+    background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
+    padding: 8px 16px; /* Reduced padding for compactness */
+    backdrop-filter: blur(10px); /* Blurred background effect */
   }
+
+  .navbar ul {
+    display: flex;
+    overflow-x: auto; /* Scrollable when items overflow */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+
+  .navbar li {
+    margin-right: 16px;
+  }
+
+  .navbar a {
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .navbar a:hover {
+    background-color: #f0f0f0;
+  }
+
+  @media (max-width: 768px) {
+    .navbar ul {
+      justify-content: space-between;
+    }
+  }
+
 
   .skills-container {
     padding: 1rem;
@@ -83,6 +148,10 @@ body {
   .skill-item img {
     max-width: 80px;
     max-height: 80px;
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s;
   }
 
   .skill-item span {
@@ -112,6 +181,18 @@ body {
 
   .rounded-logo {
     border-radius: 50%;
+  }
+
+  @media (max-width: 768px) {
+    .skill-item img, .project-card img {
+      max-width: 80px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .skill-item img, .project-card img {
+      max-width: 90px;
+    }
   }
 
   .projects-container {
@@ -153,6 +234,25 @@ body {
 
   .dark .click-to-view {
     color: #bbb;
+  }
+
+  @media (max-width: 768px) {
+    .skills-grid, .projects-container {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .skills-grid, .projects-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .skills-grid, .projects-container {
+      grid-template-columns: repeat(6, 1fr);
+    }
   }
   /*Contact css */
     .contact-section {
