@@ -45,7 +45,7 @@ export default function Home() {
               <div>
                 <h1 className="text-4xl ml-12">Hi! I&apos;m Devstutya Pandey</h1>
                 <p className="text-2xl font-light mt-8 ml-12">A bit about me, </p>
-                <p className="text-2xl font-light mt-2 ml-12">I&apos;m currently pursuing my Bachelor&apos;s of Science degree at The University of British Columbia, where I am diving deep into the fascinating worlds of Computer Science and Data Science. This educational journey is sharpening my technical acumen, preparing me to tackle the thrilling challenges of the ever-evolving tech landscape.</p>
+                <p className="text-2xl font-light mt-2 ml-12">I&apos;m currently pursuing my Bachelor&apos;s of Science degree at The University of British Columbia, where I am delving into the fascinating worlds of Computer Science and Data Science. This educational journey has sharpenend my technical acumen, and has prepared me to tackle the thrilling challenges of the ever-evolving tech landscape.</p>
                 <p className="text-2xl font-light mt-2 ml-12">I aim to harness the synergy of education and hands-on experience to drive innovation and contribute to cutting-edge projects in the field. </p>
               </div>    
             </div>  
