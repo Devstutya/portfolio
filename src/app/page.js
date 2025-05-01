@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import { useState, useEffect } from "react";
-import Navbar from "./navbar";
+import Navbar from "./navbar"; //Switch to altnavbar for alternative design
 import Logos from "./logos";
 import Projects from "./projects"; // Import the Projects component
 import Contact from "./contact";
