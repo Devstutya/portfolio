@@ -16,6 +16,13 @@
   }
 }
 
+@media (max-width: 640px) {
+  .responsive-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 150px; /*Adjust according to Navbar height*/

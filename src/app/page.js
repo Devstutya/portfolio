@@ -28,25 +28,25 @@ export default function Home() {
         <title>Devstutya Pandey</title>
       </Head>
       {/*Main container*/}
-      <main className="relative z-0 flex min-h-screen flex-col items-center justify-between px-4 sm:px-12 md:px-24 pt-24 sm:pt-32 md:pt-48">
+      <main className="relative z-0 flex min-h-screen flex-col items-center px-4 sm:px-8 md:px-16 pt-16 sm:pt-24 md:pt-32">
       {/* Navbar */}
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         {/*Main content of the page*/}
         <div className="z-10 w-full items-center justify-between text-sm lg:flex">
           <div className="flex flex-col items-center justify-center">
-            <div id="about" className="flex font-normal items-center justify-center space-x-4 ml-12">
+          <div id="about" className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-6 sm:gap-12 px-4 sm:px-12">
               <Image
                 src="/FormalPic.jpg"
                 alt="Devstutya Pandey"
                 width={200}
                 height={200}
-                className="rounded-full zoomed-right"
+                className="rounded-full zoomed-right responsive-image"
               />
               <div>
-                <h1 className="text-4xl ml-12">Hi! I&apos;m Devstutya Pandey</h1>
-                <p className="text-2xl font-light mt-8 ml-12">A bit about me, </p>
-                <p className="text-2xl font-light mt-2 ml-12">I&apos;m currently pursuing my Bachelor&apos;s of Science degree at The University of British Columbia, where I am delving into the fascinating worlds of Computer Science and Data Science. This educational journey has sharpened my technical acumen, and has prepared me to tackle the thrilling challenges of the ever-evolving tech landscape.</p>
-                <p className="text-2xl font-light mt-2 ml-12">I aim to harness the synergy of education and hands-on experience to drive innovation and contribute to cutting-edge projects in the field. </p>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl ml-4 sm:ml-8 md:ml-12">Hi! I&apos;m Devstutya Pandey</h1>
+                <p className="text-lg sm:text-xl md:text-2xl font-light mt-6 sm:mt-8 ml-4 sm:ml-8 md:ml-12">A bit about me, </p>
+                <p className="text-lg sm:text-xl md:text-2xl font-light mt-6 sm:mt-8 ml-4 sm:ml-8 md:ml-12">I&apos;m currently pursuing my Bachelor&apos;s of Science degree at The University of British Columbia, where I am delving into the fascinating worlds of Computer Science and Data Science. This educational journey has sharpened my technical acumen, and has prepared me to tackle the thrilling challenges of the ever-evolving tech landscape.</p>
+                <p className="text-lg sm:text-xl md:text-2xl font-light mt-6 sm:mt-8 ml-4 sm:ml-8 md:ml-12">I aim to harness the synergy of education and hands-on experience to drive innovation and contribute to cutting-edge projects in the field. </p>
               </div>    
             </div>  
             {/* Divider */}
