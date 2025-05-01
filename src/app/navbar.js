@@ -10,23 +10,23 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-white/80 dark:bg-customDarkNavBg backdrop-blur-md shadow-md border-b border-gray-200 dark:border-gray-700 px-4 sm:px-6 py-3">
-      <div className="flex justify-between items-center max-w-screen overflow-x-hidden">
+      <div className="flex justify-between items-center max-w-screen-xl mx-auto w-full overflow-x-hidden">
         <a href="#about" className="text-2xl font-semibold" onClick={closeMenu}>
           Portfolio
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 items-center text-base sm:text-lg">
+        <ul className="hidden md:flex gap-6 items-center text-base sm:text-lg overflow-x-auto whitespace-nowrap">
           <li>
             {darkMode ? (
               <BsFillSunFill
                 onClick={toggleDarkMode}
-                className="text-2xl cursor-pointer transition-transform duration-300 hover:scale-105 text-yellow-300"
+                className="text-xl cursor-pointer text-yellow-300"
               />
             ) : (
               <BsFillMoonStarsFill
                 onClick={toggleDarkMode}
-                className="text-2xl cursor-pointer inline-block transition-transform duration-300 hover:scale-105 text-indigo-800"
+                className="text-xl cursor-pointer inline-block text-indigo-800"
               />
             )}
           </li>
@@ -40,17 +40,17 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             </a>
           </li>
           <li>
-            <a href="#skills" className="inline-block transition-transform duration-300 hover:scale-105">
+            <a href="#skills" className="inline-block">
             Skills
             </a>
           </li>
           <li>
-            <a href="#projects" className="inline-block transition-transform duration-300 hover:scale-105">
+            <a href="#projects" className="inline-block">
               Projects
             </a>
           </li>
           <li>
-            <a href="#contact" className="inline-block transition-transform duration-300 hover:scale-105">
+            <a href="#contact" className="inline-block">
               Contact
             </a>
           </li>
@@ -94,9 +94,21 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
               Resume <AiOutlineDownload className="text-xl" />
             </a>
           </li>
-          <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
-          <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
-          <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
+          <li>
+            <a href="#skills" onClick={closeMenu}>
+              Skills
+            </a>
+          </li>
+          <li>
+            <a href="#projects" onClick={closeMenu}>
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={closeMenu}>
+              Contact
+            </a>
+          </li>
         </ul>
       )}
     </header>
