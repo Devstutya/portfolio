@@ -28,8 +28,8 @@ export default function Home() {
         <title>Devstutya Pandey</title>
       </Head>
       {/*Main container*/}
-      <main className="relative z-0 flex min-h-screen flex-col items-center justify-between p-24 pt-48">
-        {/* Navbar */}
+      <main className="relative z-0 flex min-h-screen flex-col items-center justify-between px-4 sm:px-12 md:px-24 pt-24 sm:pt-32 md:pt-48">
+      {/* Navbar */}
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         {/*Main content of the page*/}
         <div className="z-10 w-full items-center justify-between text-sm lg:flex">
