@@ -76,7 +76,19 @@ const Projects = () => {
             Click to view on GitHub
           </span>
         </a>
-        {/* Add more projects as needed */}
+        <a
+          href="https://github.com/Devstutya/Image-Aesthetics-Webapp"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="project-card relative p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 mb-8 max-w-lg mx-auto opacity-0"
+        >
+          <h3 className="text-3xl font-medium mb-4">Image Aesthetics Webapp</h3>
+          <p className="text-xl text-left font-light mb-4">An AI powered web application that uses a neural network to predict the aesthetics of an image. Built and trained deep learning models to generate high-quality images based on user inputs.</p>
+          <span className="click-to-view absolute bottom-2 left-2 right-2 text-sm font-medium text-gray-500 opacity-0 transition-opacity duration-300">
+            Click to view on GitHub
+          </span>
+        </a>
+        {/* Add more project cards as needed */}
       </div>
     </div>
   );
