@@ -32,7 +32,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </li>
           <li>
             <a
-              href="/resume_updated.pdf"
+              href="/resume_improved.pdf"
               download="Devstutya_Pandey_Resume.pdf"
               className="bg-gray-200 dark:bg-gray-800 rounded px-3 py-1 flex items-center gap-1 "
             >
