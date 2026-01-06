@@ -92,7 +92,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           <li>
             <a
               href="/resume.pdf"
-              download="Devstutya_Pandey_Resume.pdf"
+              //Improved mobile compatability
+              target="_blank"
+              rel="noopener noreferrer"
+              // // Doesn't work for mobile
+              // download="Devstutya_Pandey_Resume.pdf"
               className="flex items-center gap-1 bg-gray-200 dark:bg-gray-800 px-3 py-1 rounded"
               onClick={closeMenu}
             >
