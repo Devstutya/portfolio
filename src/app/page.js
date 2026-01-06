@@ -45,8 +45,8 @@ export default function Home() {
               <div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl ml-4 sm:ml-8 md:ml-12">Hi! I&apos;m Devstutya Pandey</h1>
                 <p className="text-lg sm:text-xl md:text-2xl font-light mt-6 sm:mt-8 ml-4 sm:ml-8 md:ml-12">A bit about me, </p>
-                <p className="text-lg sm:text-xl md:text-2xl font-light mt-6 sm:mt-8 ml-4 sm:ml-8 md:ml-12">I&apos;m currently pursuing my Bachelor&apos;s of Science degree at The University of British Columbia, where I am delving into the fascinating worlds of Computer Science and Data Science. This educational journey has sharpened my technical acumen, and has prepared me to tackle the thrilling challenges of the ever-evolving tech landscape.</p>
-                <p className="text-lg sm:text-xl md:text-2xl font-light mt-6 sm:mt-8 ml-4 sm:ml-8 md:ml-12">I aim to harness the synergy of education and hands-on experience to drive innovation and contribute to cutting-edge projects in the field. </p>
+                <p className="text-lg sm:text-xl md:text-2xl font-light mt-6 sm:mt-8 ml-4 sm:ml-8 md:ml-12">I&apos;m a recent graduat with a Bachelor&apos;s of Science degree at The University of British Columbia, where I delved into the fascinating worlds of Computer Science and Data Science. This educational journey has sharpened my technical acumen, and has prepared me to tackle the thrilling challenges of the ever-evolving tech landscape.</p>
+                <p className="text-lg sm:text-xl md:text-2xl font-light mt-6 sm:mt-8 ml-4 sm:ml-8 md:ml-12">I hope to use my education and my technical skillset to build something that changes the world </p>
               </div>    
             </div>  
             {/* Divider */}
