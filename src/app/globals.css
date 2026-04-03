@@ -93,7 +93,7 @@ html {
     padding: 20px;
   }
 
-  .skill-item {
+  .skills-grid .skill-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,7 +105,7 @@ html {
     transition: background-color 0.3s, border-color 0.3s;
   }
 
-  .skill-item img {
+  .skills-grid .skill-item img {
     max-height: 80px;
     width: 100%;
     max-width: 100px;
@@ -113,20 +113,20 @@ html {
     transition: transform 0.3s;
   }
 
-  .skill-item span {
+  .skills-grid .skill-item span {
     margin-top: 8px;
     font-weight: bold;
   }
 
   /* Light mode specific styles */
-  .bg-light .skill-item {
+  .bg-light .skills-grid .skill-item {
     background-color: #ffffff;
     border: 2px solid #ddd;
     color: #333;
   }
 
   /* Dark mode specific styles */
-  .bg-dark .skill-item {
+  .bg-dark .skills-grid .skill-item {
     background-color: #1e1e1e;
     border: 2px solid #444;
     color: #e0e0e0;
