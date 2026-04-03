@@ -41,7 +41,7 @@ const Projects = () => {
           className="project-card bg-white dark:bg-gray-800 relative p-6 rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 mb-8 max-w-lg mx-auto opacity-0"
         >
           <h3 className="text-3xl font-medium mb-4">Portfolio Website</h3>
-          <p className="text-xl text-left font-light mb-4">A modern and responsive portfolio created using react.js, showcasing my skills and projects.</p>
+          <p className="text-xl text-left font-light mb-4">A modern and responsive portfolio created using next.js, showcasing my skills and projects.</p>
           <span className="click-to-view absolute bottom-2 left-2 right-2 text-sm font-medium text-gray-500 opacity-0 transition-opacity duration-300">
             Click to view on GitHub
           </span>
