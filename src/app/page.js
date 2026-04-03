@@ -6,6 +6,7 @@ import Navbar from "./navbar"; //Switch to altnavbar for alternative design
 import Logos from "./logos";
 import Projects from "./projects"; // Import the Projects component
 import Contact from "./contact";
+import Footer from "./footer";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -90,6 +91,7 @@ export default function Home() {
             {/* Divider */}
             <hr className="w-3/4 border-t-2 border-gray-300 dark:border-gray-600 mt-40 my-12" />
             <Contact />
+            <Footer />
           </div>
         </div>
       </main>
