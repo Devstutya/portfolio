@@ -8,6 +8,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
+
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-white/80 dark:bg-customDarkNavBg backdrop-blur-md shadow-md border-b border-gray-200 dark:border-gray-700 px-4 sm:px-6 py-3">
       <div className="flex justify-between items-center max-w-screen-xl mx-auto w-full overflow-x-hidden">
@@ -32,8 +33,12 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           </li>
           <li>
             <a
-              href="/resume_improved.pdf"
-              download="Devstutya_Pandey_Resume.pdf"
+              href="/resume.pdf"
+              //For mobile compatability
+              target="_blank"
+              rel="noopener noreferrer"
+              // //A forced download- not ideal
+              // download="Devstutya_Pandey_Resume.pdf"
               className="bg-gray-200 dark:bg-gray-800 rounded px-3 py-1 flex items-center gap-1 "
             >
               Resume <AiOutlineDownload className="text-xl" />
@@ -87,7 +92,11 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
           <li>
             <a
               href="/resume.pdf"
-              download="Devstutya_Pandey_Resume.pdf"
+              //Improved mobile compatability
+              target="_blank"
+              rel="noopener noreferrer"
+              // // Doesn't work for mobile
+              // download="Devstutya_Pandey_Resume.pdf"
               className="flex items-center gap-1 bg-gray-200 dark:bg-gray-800 px-3 py-1 rounded"
               onClick={closeMenu}
             >
