@@ -20,15 +20,13 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <ul className="hidden md:flex gap-6 items-center text-base sm:text-lg overflow-x-auto whitespace-nowrap">
           <li>
             {darkMode ? (
-              <BsFillSunFill
-                onClick={toggleDarkMode}
-                className="text-xl cursor-pointer text-yellow-300"
-              />
+              <button onClick={toggleDarkMode} aria-label="Switch to light mode" className="flex items-center">
+                <BsFillSunFill className="text-xl cursor-pointer text-yellow-300" />
+              </button>
             ) : (
-              <BsFillMoonStarsFill
-                onClick={toggleDarkMode}
-                className="text-xl cursor-pointer inline-block text-indigo-800"
-              />
+              <button onClick={toggleDarkMode} aria-label="Switch to dark mode" className="flex items-center">
+                <BsFillMoonStarsFill className="text-xl cursor-pointer inline-block text-indigo-800" />
+              </button>
             )}
           </li>
           <li>
@@ -62,9 +60,14 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         </ul>
 
         {/* Hamburger Icon */}
-        <div className="md:hidden text-2xl cursor-pointer" onClick={toggleMenu}>
+        <button
+          className="md:hidden text-2xl cursor-pointer"
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+        >
           {isMenuOpen ? <AiOutlineClose /> : <AiOutlineMenu />}
-        </div>
+        </button>
       </div>
 
       {/* Mobile Menu */}
@@ -72,21 +75,21 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <ul className="md:hidden mt-4 space-y-4 text-lg bg-white dark:bg-gray-900 px-6 py-4 rounded-md shadow-md">
           <li>
             {darkMode ? (
-              <BsFillSunFill
-                onClick={() => {
-                  toggleDarkMode();
-                  closeMenu();
-                }}
-                className="text-2xl cursor-pointer text-yellow-300"
-              />
+              <button
+                onClick={() => { toggleDarkMode(); closeMenu(); }}
+                aria-label="Switch to light mode"
+                className="flex items-center"
+              >
+                <BsFillSunFill className="text-2xl cursor-pointer text-yellow-300" />
+              </button>
             ) : (
-              <BsFillMoonStarsFill
-                onClick={() => {
-                  toggleDarkMode();
-                  closeMenu();
-                }}
-                className="text-2xl cursor-pointer text-indigo-800"
-              />
+              <button
+                onClick={() => { toggleDarkMode(); closeMenu(); }}
+                aria-label="Switch to dark mode"
+                className="flex items-center"
+              >
+                <BsFillMoonStarsFill className="text-2xl cursor-pointer text-indigo-800" />
+              </button>
             )}
           </li>
           <li>

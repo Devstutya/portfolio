@@ -2,20 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 220, 235, 255;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 50, 50, 50;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 @media (max-width: 640px) {
   .responsive-image {
     width: 100px;
@@ -25,17 +11,13 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 150px; /*Adjust according to Navbar height*/
+  scroll-padding-top: 80px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+*:focus-visible {
+  outline: 2px solid #4f46e5;
+  outline-offset: 3px;
+  border-radius: 3px;
 }
 
 @media (max-width: 768px) {
@@ -46,8 +28,8 @@ body {
   }
 
   body.dark {
-    background-color: #121212; /* Darker background for dark mode */
-    color: #e0e0e0; /* Light text color for dark mode */
+    background-color: #121212;
+    color: #e0e0e0;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -67,77 +49,47 @@ body {
 @layer utilities {
 
   .navbar.dark {
-    background-color: rgba(18, 18, 18, 0.9); /* Adjusted for dark mode */
+    background-color: rgba(18, 18, 18, 0.9);
   }
 
   .skill-item.dark, .project-card.dark {
-    background-color: #1e1e1e; /* Darker background for elements */
+    background-color: #1e1e1e;
     border-color: #333;
   }
 
   .text-balance {
     text-wrap: balance;
   }
+
   .zoomed-right {
-    @apply transform scale-125 translate-x-2;
-  }
-  .fixed-navbar {
-    @apply fixed top-0 left-0 w-full z-navbar;
-    background-color: var(--navbar-bg-color, #ffffff); /* Use a variable or default color */
-    /* You can add other styles like padding, border, etc. */
-  }
-  .main-content {
-    padding-top: 80px; /* Adjust this value based on your navbar height */
+    @apply transform scale-110 translate-x-1;
   }
 
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; 
-    background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
-    padding: 8px 16px; /* Reduced padding for compactness */
-    backdrop-filter: blur(10px); /* Blurred background effect */
-  }
-
-  .navbar ul {
-    display: flex;
-    overflow-x: auto; /* Scrollable when items overflow */
-    white-space: nowrap; /* Prevent wrapping */
-  }
-
-  .navbar li {
-    margin-right: 16px;
-  }
-
-  .navbar a {
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .navbar a:hover {
-    background-color: #f0f0f0;
-  }
-
-  @media (max-width: 768px) {
-    .navbar ul {
-      justify-content: space-between;
+  @media (max-width: 640px) {
+    .zoomed-right {
+      transform: none;
     }
   }
 
+  .fixed-navbar {
+    @apply fixed top-0 left-0 w-full z-navbar;
+    background-color: var(--navbar-bg-color, #ffffff);
+  }
+
+  .main-content {
+    padding-top: 80px;
+  }
 
   .skills-container {
     padding: 1rem;
     text-align: center;
-    width: 90%;    
+    width: 90%;
   }
 
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
     padding: 20px;
   }
 
@@ -148,13 +100,12 @@ body {
     justify-content: center;
     padding: 24px;
     border-radius: 8px;
-    background-color: #ffffff; /* Ensure white background */
+    background-color: #ffffff;
     border: 2px solid #ddd;
     transition: background-color 0.3s, border-color 0.3s;
   }
 
   .skill-item img {
-    max-width: 80px;
     max-height: 80px;
     width: 100%;
     max-width: 100px;
@@ -169,16 +120,16 @@ body {
 
   /* Light mode specific styles */
   .bg-light .skill-item {
-    background-color: #ffffff; /* White background in light mode */
+    background-color: #ffffff;
     border: 2px solid #ddd;
     color: #333;
   }
 
   /* Dark mode specific styles */
   .bg-dark .skill-item {
-    background-color: #ffffff; /* White background in dark mode */
+    background-color: #1e1e1e;
     border: 2px solid #444;
-    color: #333; /* Text color in dark mode */
+    color: #e0e0e0;
   }
 
   .skill-logo {
@@ -206,16 +157,16 @@ body {
   .projects-container {
     padding: 1rem;
     text-align: center;
-    width: 90%;    
+    width: 90%;
   }
 
   .project-card:hover .click-to-view {
-    opacity: 1; /* Makes the "Click to view" text visible */
+    opacity: 1;
   }
 
   .click-to-view {
-    opacity: 0; /* Start with the text hidden */
-    transition: opacity 0.3s ease-in-out; /* Smooth fade-in effect */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
 
   /* Project Card */
@@ -228,15 +179,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   }
 
-  /* Dark Mode Specific project Styles */
-  .dark .project-card {
-    background-color: #2d2d2d;
-    color: #f0f0f0;
-    border: 1px solid #444;
-  }
-
   .dark .project-card:hover {
-    background-color: #3a3a3a;
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
   }
 
@@ -262,8 +205,9 @@ body {
       grid-template-columns: repeat(6, 1fr);
     }
   }
-  /*Contact css */
-    .contact-section {
+
+  /* Contact css */
+  .contact-section {
     padding: 2rem;
     text-align: center;
     width: 90%;
@@ -271,38 +215,14 @@ body {
     margin: 0 auto;
   }
 
-  .contact-info-box {
-    background-color: #ffffff; /* White background for the contact box */    
-    border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
-    text-align: left;
+  /* Reduced motion and animation visibility */
+  @media (prefers-reduced-motion: reduce) {
+    .skill-item, .project-card, .contact-section {
+      opacity: 1 !important;
+    }
   }
 
-  .contact-info-box p {
-    margin: 0.5rem 0;
+  .animate__animated {
+    opacity: 1 !important;
   }
-
-  .contact-info-box a {
-    color: #1d4ed8; /* Blue color for links */
-    text-decoration: none;
-  }
-
-  .contact-info-box a:hover {
-    text-decoration: underline;
-  }
-
-  /* Light mode styles */
-  .bg-light .contact-info-box {
-    border-color: #ddd;
-  }
-
-  /* Dark mode styles */
-  .bg-dark .contact-info-box {
-    background-color: #111111; /* Dark background for contact box */
-    border-color: #444;
-    color: #ddd; /* Ensure text is readable */
-  }
-
 }

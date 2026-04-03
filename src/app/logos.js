@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { useEffect } from 'react';
 import "animate.css";
+import { useScrollAnimation } from './useScrollAnimation';
 
 const logos = [
   { src: '/python-logo.png', alt: 'Python Logo', title: 'Python', name: 'Python' },
@@ -24,26 +24,7 @@ const logos = [
 ];
 
 const Logos = () => {
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -10% 0px', // Start the animation a bit before the section fully enters the view
-    };
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-  
-    const sections = document.querySelectorAll('.skill-item, .project-card, .contact-section');
-    sections.forEach((section) => observer.observe(section));
-  
-    return () => observer.disconnect(); // Cleanup observer on unmount
-  }, []);
+  useScrollAnimation();
 
   return (
     <div className="skills-grid">

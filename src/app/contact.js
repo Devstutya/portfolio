@@ -1,27 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "animate.css";
+import { useScrollAnimation } from './useScrollAnimation';
 
 const Contact = () => {
-  useEffect(() => {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -10% 0px',
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    const sections = document.querySelectorAll('.skill-item, .project-card, .contact-section');
-    sections.forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
-  }, []);
+  useScrollAnimation();
 
   return (
     <section
