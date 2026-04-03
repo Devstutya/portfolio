@@ -17,7 +17,7 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 items-center text-base sm:text-lg overflow-x-auto whitespace-nowrap">
+        <ul className="hidden md:flex gap-6 items-center text-sm font-medium overflow-x-auto whitespace-nowrap">
           <li>
             {darkMode ? (
               <button onClick={toggleDarkMode} aria-label="Switch to light mode" className="flex items-center">

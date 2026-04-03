@@ -45,7 +45,7 @@ const Logos = () => {
               width={100}
               height={100}
             />
-            <span>{logo.name}</span>
+            <span className="text-sm">{logo.name}</span>
           </div>
         ))}
       </div>

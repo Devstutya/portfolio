@@ -48,7 +48,7 @@ const Contact = () => {
 
           {/* Left column — contact info */}
           <div className="p-8 sm:p-10 bg-gray-900 dark:bg-black text-white flex flex-col justify-center">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Get in Touch</h2>
+            <h2 className="text-3xl font-semibold mb-4">Get in Touch</h2>
             <p className="text-gray-300 mb-8 leading-relaxed">
               I&apos;m always open to new opportunities and collaborations. Feel free to reach out!
             </p>
@@ -96,7 +96,7 @@ const Contact = () => {
 
           {/* Right column — contact form */}
           <div className="p-8 sm:p-10 bg-white dark:bg-gray-900">
-            <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-gray-900 dark:text-white">
+            <h2 className="text-3xl font-semibold mb-6 text-gray-900 dark:text-white">
               Connect with Me
             </h2>
 
