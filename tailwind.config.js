@@ -13,24 +13,38 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        dark: '#121212', // Example dark mode background color
-        light: '#ffffff', // Example light mode background color
-        customDarkNavBg: '#1a1a1a', // Custom dark mode navbar background color
+        /* All these now resolve from CSS variables, so they change with data-theme */
+        cyberCyan: 'var(--accent-cyan)',
+        cyberPink: 'var(--accent-pink)',
+        cyberDark: 'var(--bg-primary)',
+        cyberCard: 'var(--bg-card)',
+        cyberMuted: 'var(--text-muted)',
+        cyberText: 'var(--text-primary)',
+        cyberSecondary: 'var(--bg-secondary)',
+        /* Keep static fallbacks for non-themed usage */
+        dark: '#0a0a12',
+        light: '#ffffff',
+        customDarkNavBg: 'var(--navbar-bg)',
       },
-      // Extend spacing for padding and margin
       spacing: {
-        'navbar-height': '80px', // Adjust based on your navbar height
+        'navbar-height': '80px',
       },
       zIndex: {
-        'navbar': '1000', // Ensure navbar stays on top
+        'navbar': '1000',
       },
-      // Add custom utilities
       transform: {
         'zoomed-right': 'scale(1.2) translateX(10px)',
       },
+      fontFamily: {
+        mono: ['var(--font-jetbrains)', 'JetBrains Mono', 'monospace'],
+      },
+      boxShadow: {
+        'cyber-glow': 'var(--glow)',
+        'cyber-glow-strong': 'var(--glow-strong)',
+      },
     },
   },
-  darkMode: 'class', // Enable class-based dark mode
+  darkMode: 'class',
   variants: {
     extend: {},
   },

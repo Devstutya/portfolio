@@ -2,6 +2,331 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================
+   THREE-WAY THEME SYSTEM: Light / Dark / Cyberpunk
+   ============================================ */
+
+/* --- Light Theme --- */
+html[data-theme="light"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --bg-card: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-heading: #111827;
+  --text-muted: #000000;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #ec4899;
+  --accent-cyan: #3b82f6;
+  --accent-pink: #ec4899;
+  --accent-green: #10b981;
+  --accent-yellow: #f59e0b;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(59, 130, 246, 0.5);
+  --glow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --glow-strong: 0 4px 14px rgba(59, 130, 246, 0.15);
+  --navbar-bg: rgba(255, 255, 255, 0.85);
+  --navbar-border: rgba(0, 0, 0, 0.08);
+  --input-bg: #f9fafb;
+  --grid-line: rgba(0, 0, 0, 0.04);
+  --scanline: transparent;
+}
+
+/* --- Dark Theme --- */
+html[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-heading: #f8fafc;
+  --text-muted: #ffffff;
+  --accent-primary: #818cf8;
+  --accent-secondary: #f472b6;
+  --accent-cyan: #818cf8;
+  --accent-pink: #f472b6;
+  --accent-green: #34d399;
+  --accent-yellow: #fbbf24;
+  --border-color: rgba(148, 163, 184, 0.15);
+  --border-hover: rgba(129, 140, 248, 0.5);
+  --glow: 0 0 15px rgba(129, 140, 248, 0.1);
+  --glow-strong: 0 0 20px rgba(129, 140, 248, 0.2);
+  --navbar-bg: rgba(15, 23, 42, 0.85);
+  --navbar-border: rgba(148, 163, 184, 0.1);
+  --input-bg: #0f172a;
+  --grid-line: rgba(148, 163, 184, 0.04);
+  --scanline: transparent;
+}
+
+/* --- Cyberpunk Theme --- */
+html[data-theme="cyberpunk"] {
+  --bg-primary: #0a0a12;
+  --bg-secondary: #0d0d1a;
+  --bg-card: #111118;
+  --text-primary: #e0e0e0;
+  --text-secondary: rgba(255, 255, 255, 0.5);
+  --text-heading: #ffffff;
+  --text-muted: #a0a0b0;
+  --accent-primary: #00f0ff;
+  --accent-secondary: #ff2a6d;
+  --accent-cyan: #00f0ff;
+  --accent-pink: #ff2a6d;
+  --accent-green: #39FF14;
+  --accent-yellow: #FFD700;
+  --accent-tertiary: #b967ff;
+  --border-color: rgba(0, 240, 255, 0.15);
+  --border-hover: rgba(0, 240, 255, 0.6);
+  --glow: 0 0 15px rgba(0, 240, 255, 0.15);
+  --glow-strong: 0 0 20px rgba(0, 240, 255, 0.3);
+  --navbar-bg: rgba(10, 10, 18, 0.85);
+  --navbar-border: rgba(0, 240, 255, 0.2);
+  --input-bg: #0a0a12;
+  --grid-line: rgba(0, 240, 255, 0.03);
+  --scanline: repeating-linear-gradient(
+    0deg,
+    rgba(0, 240, 255, 0.015) 0px,
+    rgba(0, 240, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+}
+
+/* ============================================
+   GLOBAL BASE STYLES
+   ============================================ */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+/* Smooth theme transitions */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Opt out of transition for animations that need instant changes */
+.no-theme-transition,
+.no-theme-transition *,
+.no-theme-transition *::before,
+.no-theme-transition *::after {
+  transition: none !important;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ============================================
+   GRID BACKGROUND PATTERN
+   ============================================ */
+
+.theme-grid-bg {
+  position: relative;
+}
+
+.theme-grid-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Cyberpunk dot overlay */
+html[data-theme="cyberpunk"] .theme-grid-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================
+   CYBERPUNK-SPECIFIC DECORATIVE STYLES
+   ============================================ */
+
+/* Cyberpunk navbar glow border */
+html[data-theme="cyberpunk"] .theme-navbar {
+  border-bottom: 2px solid var(--accent-cyan);
+  box-shadow: 0 2px 10px rgba(0, 240, 255, 0.3);
+}
+
+/* Cyberpunk monospace on headings and nav */
+html[data-theme="cyberpunk"] .theme-navbar,
+html[data-theme="cyberpunk"] .theme-navbar a,
+html[data-theme="cyberpunk"] .section-heading {
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+}
+
+/* Cyberpunk section heading prefix */
+html[data-theme="cyberpunk"] .section-heading::before {
+  content: "// ";
+  color: var(--accent-green);
+}
+
+/* Cyberpunk section heading style */
+html[data-theme="cyberpunk"] .section-heading {
+  text-transform: uppercase;
+  color: var(--accent-yellow);
+  letter-spacing: 0.05em;
+}
+
+/* Cyberpunk brand text */
+html[data-theme="cyberpunk"] .theme-brand {
+  color: var(--accent-yellow) !important;
+}
+
+/* Cyberpunk subtitle blinking cursor */
+html[data-theme="cyberpunk"] .hero-subtitle::after {
+  content: '|';
+  animation: blink 1s infinite;
+  color: var(--accent-cyan);
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Cyberpunk hero name */
+html[data-theme="cyberpunk"] .hero-name {
+  color: var(--accent-yellow) !important;
+  font-family: var(--font-jetbrains), 'JetBrains Mono', monospace;
+}
+
+/* Cyberpunk project cards */
+html[data-theme="cyberpunk"] .project-card {
+  border-top: 2px solid var(--accent-yellow);
+}
+
+html[data-theme="cyberpunk"] .project-card:hover {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+}
+
+/* Cyberpunk skill items */
+html[data-theme="cyberpunk"] .skill-item {
+  border-radius: 2px;
+}
+
+html[data-theme="cyberpunk"] .skill-item:hover {
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+}
+
+/* Cyberpunk skill pills */
+html[data-theme="cyberpunk"] .skill-pill {
+  border-radius: 2px;
+  border-color: var(--accent-green);
+}
+
+html[data-theme="cyberpunk"] .skill-pill:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+}
+
+/* Cyberpunk category labels */
+html[data-theme="cyberpunk"] .skill-category {
+  color: var(--accent-green);
+}
+
+/* Cyberpunk footer scanline */
+html[data-theme="cyberpunk"] .theme-footer {
+  background-image: var(--scanline);
+}
+
+html[data-theme="cyberpunk"] .theme-footer .footer-copyright {
+  color: var(--accent-tertiary);
+}
+
+/* Cyberpunk contact form */
+html[data-theme="cyberpunk"] .contact-input:focus {
+  --tw-ring-color: var(--accent-green);
+  border-color: var(--accent-green);
+}
+
+html[data-theme="cyberpunk"] .contact-submit {
+  background-color: var(--accent-yellow) !important;
+  color: #0a0a12 !important;
+}
+
+html[data-theme="cyberpunk"] .contact-submit:hover {
+  background-color: #e6c300 !important;
+}
+
+html[data-theme="cyberpunk"] .contact-label {
+  color: var(--accent-cyan);
+}
+
+html[data-theme="cyberpunk"] .contact-heading {
+  color: var(--accent-cyan) !important;
+}
+
+/* Cyberpunk reduced border-radius */
+html[data-theme="cyberpunk"] .theme-rounded {
+  border-radius: 2px;
+}
+
+/* Cyberpunk green borders on skill items */
+html[data-theme="cyberpunk"] .skills-grid .skill-item {
+  border-color: rgba(57, 255, 20, 0.2);
+}
+
+html[data-theme="cyberpunk"] .skills-grid .skill-item:hover {
+  border-color: rgba(57, 255, 20, 0.6);
+}
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  border-color: var(--border-hover);
+  background: var(--border-color);
+}
+
+.theme-toggle-btn .rune-icon {
+  transition: filter 0.2s ease;
+}
+
+.theme-toggle-btn:hover .rune-icon {
+  filter: drop-shadow(0 0 6px rgba(57, 255, 20, 0.6));
+}
+
+/* ============================================
+   RESPONSIVE OVERRIDES
+   ============================================ */
+
 @media (max-width: 640px) {
   .responsive-image {
     width: 100px;
@@ -9,27 +334,10 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
-}
-
-*:focus-visible {
-  outline: 2px solid #4f46e5;
-  outline-offset: 3px;
-  border-radius: 3px;
-}
-
 @media (max-width: 768px) {
   body {
     font-size: 16px;
     line-height: 1.5;
-    overflow-x: hidden;
-  }
-
-  body.dark {
-    background-color: #121212;
-    color: #e0e0e0;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -46,16 +354,11 @@ html {
   }
 }
 
+/* ============================================
+   UTILITY LAYER
+   ============================================ */
+
 @layer utilities {
-
-  .navbar.dark {
-    background-color: rgba(18, 18, 18, 0.9);
-  }
-
-  .skill-item.dark, .project-card.dark {
-    background-color: #1e1e1e;
-    border-color: #333;
-  }
 
   .text-balance {
     text-wrap: balance;
@@ -73,7 +376,7 @@ html {
 
   .fixed-navbar {
     @apply fixed top-0 left-0 w-full z-navbar;
-    background-color: var(--navbar-bg-color, #ffffff);
+    background-color: var(--navbar-bg);
   }
 
   .main-content {
@@ -99,10 +402,16 @@ html {
     align-items: center;
     justify-content: center;
     padding: 24px;
-    border-radius: 8px;
-    background-color: #ffffff;
-    border: 2px solid #ddd;
-    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 4px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+
+  .skills-grid .skill-item:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--glow);
+    transform: translateY(-2px);
   }
 
   .skills-grid .skill-item img {
@@ -116,20 +425,7 @@ html {
   .skills-grid .skill-item span {
     margin-top: 8px;
     font-weight: bold;
-  }
-
-  /* Light mode specific styles */
-  .bg-light .skills-grid .skill-item {
-    background-color: #ffffff;
-    border: 2px solid #ddd;
-    color: #333;
-  }
-
-  /* Dark mode specific styles */
-  .bg-dark .skills-grid .skill-item {
-    background-color: #1e1e1e;
-    border: 2px solid #444;
-    color: #e0e0e0;
+    color: var(--text-primary);
   }
 
   .skill-logo {
@@ -160,9 +456,8 @@ html {
     width: 90%;
   }
 
-  /* Project Card */
   .project-card {
-    transition: border-color 0.2s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   }
 
   @media (max-width: 768px) {

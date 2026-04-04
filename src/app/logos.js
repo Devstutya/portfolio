@@ -24,7 +24,7 @@ const logos = [
 ];
 
 const ADDITIONAL_SKILLS = {
-  "AI & ML": ["LangChain", "OpenAI API", "RAG Pipelines", "Pinecone", "Scikit-learn", "Pandas", "NumPy"],
+  "AI & ML": ["LangChain", "OpenAI API", "RAG Pipelines", "Pinecone", "Scikit-learn", "NumPy"],
   "Additional Web & Full Stack": ["Remix", "Django", "Flask", "MongoDB", "Redis"],
   "Additional Tools & Cloud": ["AWS", "GCP", "GitHub Actions", "Git", "Linux", "Jest", "Playwright"],
 };
@@ -51,20 +51,20 @@ const Logos = () => {
       </div>
 
       {/* Separator */}
-      <div className="border-t border-gray-200/30 dark:border-gray-700/30 my-10 mx-auto max-w-3xl" />
+      <div className="border-t border-cyberCyan/10 my-10 mx-auto max-w-3xl" />
 
       {/* Additional Skills Pills */}
       <div className="flex flex-col gap-8 w-full max-w-3xl mx-auto text-left px-4">
         {Object.entries(ADDITIONAL_SKILLS).map(([category, skills]) => (
           <div key={category} className="skill-item opacity-0">
-            <h3 className="text-xs font-medium uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-3">
+            <h3 className="skill-category text-xs font-medium uppercase tracking-widest text-cyberCyan mb-3 font-mono">
               {category}
             </h3>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-full border border-gray-300/40 dark:border-gray-600/40 px-3 py-1.5 text-sm transition-colors duration-200 hover:border-gray-400/70 dark:hover:border-gray-400/70 cursor-default"
+                  className="skill-pill rounded border border-cyberCyan/25 px-3 py-1.5 text-sm text-cyberText font-mono transition-colors duration-200 hover:border-cyberCyan/60 hover:text-cyberCyan cursor-default"
                 >
                   {skill}
                 </span>

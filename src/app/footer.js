@@ -4,9 +4,9 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t border-gray-300/30 dark:border-gray-700/30 py-8">
+    <footer className="theme-footer w-full border-t border-cyberCyan/10 py-8">
       <div className="flex flex-col items-center gap-3">
-        <p className="text-sm text-gray-500 dark:text-gray-400">
+        <p className="footer-copyright text-sm text-cyberMuted font-mono">
           &copy; 2026 Devstutya Pandey
         </p>
         <div className="flex items-center gap-4">
@@ -15,7 +15,7 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-gray-400 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+            className="text-cyberMuted hover:text-cyberCyan transition-colors duration-200"
           >
             <FaGithub className="w-5 h-5" />
           </a>
@@ -24,14 +24,14 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-gray-400 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+            className="text-cyberMuted hover:text-cyberCyan transition-colors duration-200"
           >
             <FaLinkedinIn className="w-5 h-5" />
           </a>
           <a
             href="mailto:devstutyapandey@gmail.com"
             aria-label="Email"
-            className="text-gray-400 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
+            className="text-cyberMuted hover:text-cyberPink transition-colors duration-200"
           >
             <MdEmail className="w-5 h-5" />
           </a>
