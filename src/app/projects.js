@@ -4,6 +4,13 @@ import { useScrollAnimation } from './useScrollAnimation';
 
 const projects = [
   {
+    name: "DocuMind",
+    description:
+      "An AI-powered document Q&A system using LangChain and OpenAI GPT-4, enabling semantic search across PDFs with contextual citations. Built with a production-grade RAG pipeline and Pinecone vector database for sub-second query latency.",
+    tags: ["Python", "LangChain", "OpenAI", "Pinecone", "FastAPI", "React"],
+    href: "https://github.com/Devstutya/DocuMind",
+  },
+  {
     name: "Discourse",
     description:
       "An intuitive e-learning platform enabling collaborative learning experiences with real-time features and user authentication.",
